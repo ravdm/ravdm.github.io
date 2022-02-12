@@ -1,0 +1,139 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Robert Vandermeulen's Personal Website</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/cover/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+  <body class="text-left">
+    <div class="cover-container d-flex mx-auto flex-column justify-content-start">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand p-2">  Robert A. Vandermeulen</h3>
+          <nav class="nav nav-masthead">
+            <a class="nav-link" href="./index.html">Home</a>
+            <a class="nav-link " href="./pub.html">Publications</a>
+            <a class="nav-link active" href="#">Research</a>
+            <a class="nav-link" href="./teach.html">Teaching</a>
+            <a class="nav-link" href="./about.html">About Me </a>
+          </nav>
+        </div>
+
+      </header>
+
+      <main role="main" class="inner cover">
+
+        <div class="container">
+          <h2>
+            Overview
+          </h2>
+          I study machine learning, particularly nonparametric statistics where I am interested in developing and proving guarantees for algorithms and studying the basic mathematics underlying certain nonparametric problem settings. In deep learning I have mostly focused on studying deep anomaly detection, but I am beginning to move into other deep topics such as deep probabilistic models.<br><br>
+          <u>Potential Collaborators and Students</u>: Students sometimes send me emails looking for PhD or internship positions. I am not in control of any budget so I cannot hire PhD students nor other sorts of researchers. I <i>can</i> help advise students in their research (PhD or otherwise) and I am open to considering collaborations in this capacity.
+          <hr>
+
+
+          <h2>
+            Deep Anomaly Detection
+          </h2>
+          <div class="row">
+            <div class="col-8"> Anomaly detection is the task of determining if a new data point seems anomalous or unusual when provided with a collection of data known to be nominal (normal looking). There exist many methods for anomaly detection in the classic lower-dimensional settings. However there is less development of deep approaches to anomaly detection methods for use with high dimensional data, particularly images. This lack of development is not due to a lack of usefulness: there are many applications for deep anomaly detection including medical imaging applications like tumor detection, and quality control for industrial applications. 
+              <br><br>
+              I work on deep one-class methods for deep anomaly detection, for example Deep Support Vector Data Description. These methods are quite effective and have garnered a fair amount of attention from the machine learning community. I am interested collaborations with domain experts who have intriguing applications for deep anomaly detection.
+              <br><br>
+              <u>Relevant Works:</u>
+              <ul>
+          <li><a href="http://proceedings.mlr.press/v80/ruff18a.html"> Deep One-Class Classification</a>, ICML 2018 <a href="https://github.com/lukasruff/Deep-SVDD-PyTorch">[CODE]</a></li>
+          <li><a href="https://link.springer.com/chapter/10.1007/978-3-030-10925-7_1"> Image Anomaly Detection with Generative Adversarial Networks</a>, ECML PKDD 2018</li>
+
+          <li><a href="https://openreview.net/forum?id=HkgH0TEYwH">Deep Semi-Supervised Anomaly Detection</a>, ICLR 2020 <a href="https://github.com/lukasruff/Deep-SAD-PyTorch">[CODE]</a></li>
+          <li><a href="https://openreview.net/forum?id=A5VV3UyIQz">Explainable Deep One-Class Classification<a>, ICLR 2021 <a href="https://github.com/liznerski/fcdd/"> [CODE]</a></li>
+          <li><a href= "https://proceedings.mlr.press/v139/deecke21a.html">Transfer-Based Semantic Anomaly Detection</a>, ICML 2021 <a href="https://github.com/VICO-UoE/TransferAD"> [CODE]</a></li> 
+            <li><a href="https://ieeexplore.ieee.org/document/9347460"> A Unifying Review of Deep and Shallow Anomaly Detection</a>, Proceedings of the IEEE 2021</li>
+              </ul>
+            </div>
+
+            <div class="col-4"> <img src="ad.png" style="height:160px";> CIFAR-10 dataset. Using our method we show the most normal examples from some classes (e.g. "cat" in the middle) on the left with most anomalous on the right. </div>
+          </div>
+
+          <hr>
+
+
+          <h2>
+            Nonparametric Mixture Modelling
+          </h2>
+
+          <div class="row">
+            <div class="col-8"> In mixture modelling one tries to find a convex combination of densities which fit the data well, with the idea being that the mixture components will reveal some interesting structure in the data or that they can be used for some other task, e.g. clustering. For mixture modelling to make sense one typically restricts the mixture components to some class of densities, for example the space of multivariate Gaussian distributions in the case of the classic <i>Gaussian mixture model</i>. I study the setting where one makes no assumptions on the mixture components and instead one has access to collections of samples of known to come from the same mixture component. This problem has close connections nonnegative tensor factorizations.<br><br>
+
+              As an example of this problem setting lets consider topic modelling. In the topic modelling setting a mixture component would be a distribution over words, which in this case is representative of a "topic." A "collection of samples known to come from the same component" could be a document, say a Twitter tweet, and it is assumed that the tweet is generated from a single topic. The words in this example are discrete and this discrete topic modelling setting has already seen a fair amount of investigation. One could, however, use a powerful word embedding (e.g. BERT) to transform the discrete words into real-valued vectors thus yielding a continuous version of the topic model that fits the "nonparametric mixture model" setting. The transformed words' geometry encodes abstract meaning which is not available with the discrete untransformed data, and additionally allows for more meaningful relations beyond the discrete case that can only describe if two words are equal or not. A mixture component in this case would be a probability distribution over the word embedding space, i.e. a probability distribution over abstract concepts.<br><br>
+              Beyond topic modelling there exists applications for nonparametric mixture modelling in settings where one expects subjects to be grouped, but the grouping is only obvious with repeated observations. This occurs, for example, in psychometrics where a condition like depression is only manifest in data over a period of time, not a single observation.
+              <br><br>
+              I study both the algorithmic and theoretical aspects of nonparametric mixture modelling. 
+              <br><br>
+              <u>Relevant Works:</u>
+
+              <ul>
+          <li><a href="https://projecteuclid.org/euclid.aos/1564797861">An Operator Theoretic Approach to Nonparametric Mixture Models</a>, Annals of Statistics 2019</li>
+          <li> <a href="https://papers.nips.cc/paper/2020/hash/866d90e0921ac7b024b47d672445a086-Abstract.html">Consistent Estimation of Identifiable Nonparametric Mixture Models from Grouped Observations</a>, NeurIPS 2020 </li>
+              </ul>
+            </div>
+
+            <div class="col-4"> <img src="mix.png" style="height:100px";> Our method is able to recover arbitrary mixture model components so long as they are identifiable. This enables things like provably correct clustering even when the cluster distributions overlap like above. </div>
+          </div>
+          <hr>
+          <h2>
+            Low-Rank Nonparametric Methods
+          </h2>
+          Low-rank methods have been shown to be useful for estimation problems like <a href="https://en.wikipedia.org/wiki/Matrix_completion#Low_rank_matrix_completion">matrix completion</a> and <a href="https://en.wikipedia.org/wiki/Compressed_sensing#Underdetermined_linear_system">linear regression</a>. I am interested in extending this intuition to the nonparametric setting, starting with nonparametric density estimation. Thus far I have found that techniques used previously for finite dimensional problems like matrix completion do not extend to the infinite-dimensional problems like nonparametric density estimation. Low rank nonparametric methods will require their own novel algorithms and analysis. <br><br>
+          <u>Relevant Works</u>
+          <ul>
+          <li><a href = "https://arxiv.org/abs/2010.02425">Improving Nonparametric Density Estimation with Tensor Decompositions</a>, arXiv 2020 </li>
+          <li><a href ="https://openreview.net/forum?id=uholDBWSVP">Beyond Smoothness: Incorporating Low-Rank Analysis into Nonparametric Density Estimation</a>, NeurIPS 2021</li>
+          </ul>
+          <hr>
+          <h2>
+            Other Misc. Topics
+          </h2>
+          I have worked a bit on a few other research topics, a couple are listed here.<br><br>
+          <ul>
+            <li>Supervised Density Estimation: How can we incorporate samples which we know should have low likelihood in our density estimator? </li>
+            <ul>
+
+          <li><a href="https://preregister.science/papers_20neurips/28_paper.pdf">A Proposal for Supervised Density Estimation</a>, NeurIPS: Preregistration Workshop 2020</li>
+            </ul>
+            <li>Robust Nonparametric Density Estimation</li>
+            <ul>
+          <li> <a href="http://papers.nips.cc/paper/5228-robust-kernel-density-estimation-by-scaling-and-projection-in-hilbert-space.pdf"> Robust Kernel Density Estimation by Scaling and Projection in Hilbert Space</a>, NeurIPS 2014</li>
+          <li><a href="http://jmlr.org/proceedings/papers/v30/Vandermeulen13.pdf">Consistency of Robust Kernel Density Estimators</a>, COLT 2013</li>
+            </ul>
+          </ul>
+        </div>
+      </main>
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <!-- <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p> -->
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
