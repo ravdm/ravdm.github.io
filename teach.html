@@ -13,6 +13,9 @@
     .nav-masthead .nav-link.active,.nav-masthead .nav-link:hover{color:#0d6efd;}
     .section-title{font-size:1.5rem;font-weight:600;margin-top:2rem;margin-bottom:1rem;}
     .course-title{font-weight:600;}
+    /* keep links inside accordion headers the same color as text */
+    .accordion-button a{color:inherit;text-decoration:none;}
+    .accordion-button a:hover{color:inherit;text-decoration:none;}
   </style>
 </head>
 <body>
@@ -32,18 +35,18 @@
   <main class="container my-5">
     <!-- Overview -->
     <h2 class="section-title">Overview</h2>
-    <p>I began teaching in high school as a volunteer coach for a grade-school math team and have enjoyed it ever since. Sharing knowledge is both rewarding and an excellent way to sharpen my own skills.</p>
+    <p>I began teaching in high school as a volunteer coach for a grade‑school math team and have enjoyed it ever since. Sharing knowledge is both rewarding and an excellent way to sharpen my own skills.</p>
 
     <!-- University Courses -->
     <h2 class="section-title">University Courses</h2>
-    <p>The list below covers my university-level teaching roles. Private tutoring and volunteer work can be found in my CV.</p>
+    <p>The list below covers my university‑level teaching roles. Private tutoring and volunteer work can be found in my CV.</p>
 
     <div class="accordion" id="teachingAccordion">
       <!-- Seminar 2023/24 -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingSeminar">
           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeminar" aria-expanded="true" aria-controls="collapseSeminar">
-            Seminar: Fundamentals of Probability Theory for ML — TU Berlin (Winter 2023/24)
+            Seminar: Fundamentals of Probability Theory for ML — TU Berlin (Winter 2023/24)
           </button>
         </h2>
         <div id="collapseSeminar" class="accordion-collapse collapse show" aria-labelledby="headingSeminar" data-bs-parent="#teachingAccordion">
@@ -57,7 +60,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingDL2">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDL2" aria-expanded="false" aria-controls="collapseDL2">
-            Deep Learning 2 — TU Berlin (Summer 2023)
+            Deep Learning 2 — TU Berlin (Summer 2023)
           </button>
         </h2>
         <div id="collapseDL2" class="accordion-collapse collapse" aria-labelledby="headingDL2" data-bs-parent="#teachingAccordion">
@@ -71,7 +74,7 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingIntroML">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIntroML" aria-expanded="false" aria-controls="collapseIntroML">
-            Introduction to Machine Learning — TU Kaiserslautern (Winter 2017/18)
+            Introduction to Machine Learning — TU Kaiserslautern (Winter 2017/18)
           </button>
         </h2>
         <div id="collapseIntroML" class="accordion-collapse collapse" aria-labelledby="headingIntroML" data-bs-parent="#teachingAccordion">
@@ -85,12 +88,12 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingMLI">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMLI" aria-expanded="false" aria-controls="collapseMLI">
-            Machine Learning I — TU Kaiserslautern (Winter 2017/18)
+            Machine Learning I — TU Kaiserslautern (Winter 2017/18)
           </button>
         </h2>
         <div id="collapseMLI" class="accordion-collapse collapse" aria-labelledby="headingMLI" data-bs-parent="#teachingAccordion">
           <div class="accordion-body">
-            Same teaching-assistant responsibilities as <em>Introduction to Machine Learning</em>.
+            Same teaching‑assistant responsibilities as <em>Introduction to Machine Learning</em>.
           </div>
         </div>
       </div>
@@ -99,12 +102,13 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingEECS398">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEECS398" aria-expanded="false" aria-controls="collapseEECS398">
-            <a href="https://web.eecs.umich.edu/~cscott/past_courses/eecs398w16/" class="text-decoration-none">EECS 398-001: Information Science</a> — Univ. of Michigan (Winter 2016)
+            EECS 398‑001: Information Science — Univ. of Michigan (Winter 2016)
           </button>
         </h2>
         <div id="collapseEECS398" class="accordion-collapse collapse" aria-labelledby="headingEECS398" data-bs-parent="#teachingAccordion">
           <div class="accordion-body">
-            <span class="course-title">Graduate student instructor</span>: led office hours, developed homework &amp; solutions, supervised grading, proctored &amp; graded exams, and occasionally lectured.
+            <span class="course-title">Graduate student instructor</span>: office hours, homework design, grading supervision, exam proctoring &amp; grading, and occasional lectures.
+            <br><a href="https://web.eecs.umich.edu/~cscott/past_courses/eecs398w16/" target="_blank" rel="noopener">Course website</a>
           </div>
         </div>
       </div>
@@ -113,12 +117,13 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingEECS545">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEECS545" aria-expanded="false" aria-controls="collapseEECS545">
-            <a href="https://web.eecs.umich.edu/~cscott/past_courses/eecs545f13/index.html" class="text-decoration-none">EECS 545: Machine Learning</a> — Univ. of Michigan (Fall 2013)
+            EECS 545: Machine Learning — Univ. of Michigan (Fall 2013)
           </button>
         </h2>
         <div id="collapseEECS545" class="accordion-collapse collapse" aria-labelledby="headingEECS545" data-bs-parent="#teachingAccordion">
           <div class="accordion-body">
-            <span class="course-title">Graduate student instructor</span>: office hours, homework/exam authoring, grading support.
+            <span class="course-title">Graduate student instructor</span>: office hours, authored homeworks &amp; solutions, grading support.
+            <br><a href="https://web.eecs.umich.edu/~cscott/past_courses/eecs545f13/index.html" target="_blank" rel="noopener">Course website</a>
           </div>
         </div>
       </div>
